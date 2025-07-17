@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unidad 4: Sistema Tegumentario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -5%;
+      left: -5%;
+      width: 110vw;
+      height: 110vh;
+      background: url('imagenes/FondoH2.jpeg') center center / cover no-repeat;
+      filter: brightness(0.4) blur(8px);
+      z-index: -2;
+    }
+
+    .contenido {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1, h2, h3 {
+      text-shadow: 1px 1px 3px black;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-size: 1.4rem;
+    }
+
+    p, li {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px black;
+      margin-top: 8px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 25px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      background-color: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(4px);
+    }
+
+    thead {
+      background: linear-gradient(90deg, rgba(0,188,212,0.5), rgba(0,150,200,0.5));
+    }
+
+    th, td {
+      padding: 14px 12px;
+      text-align: center;
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    th {
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    button {
+      display: block;
+      margin: 40px auto 0;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #00bcd4;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-shadow: none;
+    }
+
+    button:hover {
+      background-color: #008c9e;
+    }
+
+    @media (max-width: 600px) {
+      table, th, td {
+        font-size: 0.95rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .contenido {
+        padding: 20px;
+      }
+    }
+
+     img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+
+  @media screen and (max-width: 600px) {
+    img {
+      width: 90%;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="contenido">
+    <h1>Sistema Tegumentario</h1>
+
+    <h2>Epidermis</h2>
+    <img src="imagenes/epidermis.jpg" alt="Estructura de la Epidermis" />
+    <p>La epidermis es la capa más superficial de la piel, constituida principalmente por epitelio escamoso estratificado queratinizado. Su función principal es actuar como barrera protectora contra agentes externos, pérdida de agua y microorganismos.</p>
+    <ul>
+      <li><strong>Capas de la epidermis:</strong>
+        <ul>
+          <li><em>Estrato basal (germinativo):</em> capa más profunda, formada por células madre que proliferan y dan origen a las demás capas.</li>
+          <li><em>Estrato espinoso:</em> células unidas por desmosomas que aportan resistencia mecánica.</li>
+          <li><em>Estrato granuloso:</em> células que comienzan el proceso de queratinización, con gránulos de queratohialina.</li>
+          <li><em>Estrato lúcido:</em> presente solo en piel gruesa, zona translúcida entre granuloso y córneo.</li>
+          <li><em>Estrato córneo:</em> capa externa compuesta por células muertas queratinizadas, que se desprenden continuamente.</li>
+        </ul>
+      </li>
+      <li><strong>Células principales:</strong> queratinocitos (95%), melanocitos (producción de melanina), células de Langerhans (inmunitarias) y células de Merkel (mecano-receptoras).</li>
+    </ul>
+
+    <h2>Dermis</h2>
+    <img src="imagenes/dermis.png" alt="Estructura de la Dermis" />
+    <p>La dermis es la capa intermedia de la piel, formada por tejido conectivo denso irregular que proporciona resistencia y elasticidad. Contiene vasos sanguíneos, terminaciones nerviosas, folículos pilosos, glándulas y fibras colágenas y elásticas.</p>
+    <ul>
+      <li><strong>Capas de la dermis:</strong>
+        <ul>
+          <li><em>Dermis papilar:</em> capa superficial, más delgada, rica en capilares y terminaciones nerviosas, con papilas dérmicas que aumentan la superficie de contacto con la epidermis.</li>
+          <li><em>Dermis reticular:</em> capa profunda y más gruesa, formada por fibras de colágeno gruesas y elásticas que brindan soporte estructural.</li>
+        </ul>
+      </li>
+      <li><strong>Funciones principales:</strong> nutrición de la epidermis, termorregulación, sensación táctil, y participación en la cicatrización.</li>
+    </ul>
+
+    <h2>Hipodermis (Tejido Subcutáneo)</h2>
+    <img src="imagenes/hipodermis.jpg" alt="Estructura de la Hipodermis" />
+    <p>La hipodermis es la capa más profunda de la piel, constituida principalmente por tejido adiposo y tejido conectivo laxo. Sirve de aislante térmico, reserva energética y amortiguador mecánico que protege órganos y estructuras subyacentes.</p>
+    <ul>
+      <li><strong>Composición:</strong> adipocitos organizados en lobulillos, vasos sanguíneos y nervios.</li>
+      <li><strong>Función:</strong> conecta la piel con tejidos profundos como músculos y huesos, permite movilidad relativa y absorbe impactos.</li>
+    </ul>
+
+    <h2>Glándulas de la Piel</h2>
+    <img src="imagenes/glandulas.webp" alt="Glándulas de la piel" />
+    <p>Las glándulas cutáneas son estructuras anexas que cumplen funciones específicas en la protección y regulación de la piel.</p>
+    <ul>
+      <li><strong>Glándulas sebáceas:</strong> secretan sebo, una sustancia oleosa que lubrica y protege la piel y el cabello; se encuentran principalmente asociadas a folículos pilosos.</li>
+      <li><strong>Glándulas sudoríparas:</strong>
+        <ul>
+          <li><em>Ecrinas:</em> distribuidas en casi toda la superficie corporal, regulan la temperatura mediante la producción de sudor acuoso.</li>
+          <li><em>Apocrinas:</em> localizadas en axilas, región genital y areolas; su secreción es más viscosa y se activa en la pubertad, relacionada con el olor corporal.</li>
+        </ul>
+      </li>
+
+      <li><strong>Glándulas ceruminosas:</strong> modificadas, presentes en el conducto auditivo externo, producen cerumen que protege el oído.</li>
+        <img src="imagenes/cerumen.jpg" alt="Glándulas ceruminosas" />
+      <li><strong>Glándulas mamarias:</strong> glándulas sudoríparas modificadas especializadas en la producción de leche.</li>
+        <img src="imagenes/glandula-mamaria-1.avif" alt="Glándulas mamarias" />
+    </ul>
+
+    <button onclick="location.href='index.html#temas'">← Volver al Inicio</button>
+  </div>
+</body>
+</html>

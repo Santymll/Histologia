@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tejido Muscular y Nervioso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -5%;
+      left: -5%;
+      width: 110vw;
+      height: 110vh;
+      background: url('imagenes/FondoH2.jpeg') center center / cover no-repeat;
+      filter: brightness(0.4) blur(8px);
+      z-index: -2;
+    }
+
+    .contenido {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1, h2, h3 {
+      text-shadow: 1px 1px 3px black;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-size: 1.4rem;
+    }
+
+    p, li {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+
+    /* ---------- ESTILO DE LAS TABLAS MEJORADO ---------- */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 25px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      background-color: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(4px);
+    }
+
+    thead {
+      background: linear-gradient(90deg, rgba(0,188,212,0.5), rgba(0,150,200,0.5));
+    }
+
+    th, td {
+      padding: 14px 12px;
+      text-align: center;
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    th {
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* ---------- BOTÓN ---------- */
+    button {
+      display: block;
+      margin: 40px auto 0;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #00bcd4;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #008c9e;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      table, th, td {
+        font-size: 0.95rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .contenido {
+        padding: 20px;
+      }
+    }
+     img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+
+  @media screen and (max-width: 600px) {
+    img {
+      width: 90%;
+    }
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="contenido">
+    <h1>Tejido Muscular y Nervioso</h1>
+
+    <h2>Tejido Muscular</h2>
+    <img src="imagenes/Muscular.jpg" alt="Músculo esquelético histología" />
+    <p>El tejido muscular está compuesto por miocitos especializados en la contracción, representando entre un 40 y 50% del peso corporal. Se clasifica en:</p>
+    <img src="imagenes/TiposMusculos.png" alt="Tipos de musculos" />
+    <h3>1. Músculo Esquelético</h3>
+    <ul>
+      <li>Fibras largas, cilíndricas y multinucleadas (núcleos periféricos).</li>
+      <li>Presenta estrías transversales visibles: bandas A (oscuras) e I (claras).</li>
+      <li>Recubierto por capas de tejido conectivo: endomisio, perimisio y epimisio.</li>
+      <li>Está bajo control voluntario y permite el movimiento, la postura, la producción de calor y la estabilidad.</li>
+    </ul>
+
+    <h3>2. Músculo Cardíaco</h3>
+    <ul>
+      <li>Fibras cortas, estriadas y ramificadas con uno o dos núcleos centrales.</li>
+      <li>Unidas mediante discos intercalares que permiten contracción sincronizada.</li>
+      <li>Contracción involuntaria, regulada por el marcapasos cardíaco y el sistema nervioso autónomo.</li>
+    </ul>
+
+    <h3>3. Músculo Liso</h3>
+    <ul>
+      <li>Formado por células fusiformes, mononucleadas, sin estrías.</li>
+      <li>Su contracción es lenta, sostenida e involuntaria.</li>
+      <li>Se encuentra en las paredes de órganos huecos como vasos sanguíneos, intestinos, útero, vejiga y vías respiratorias.</li>
+      <li>Posee uniones en hendidura (gap junctions) que permiten contracciones coordinadas.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>Tipo</th><th>Estriaciones</th><th>Control</th><th>Características</th><th>Ubicación</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Esquelético</td><td>Sí</td><td>Voluntario</td><td>Multinucleado, fibras largas</td><td>Huesos</td></tr>
+        <tr><td>Cardíaco</td><td>Sí</td><td>Involuntario</td><td>Ramificado, discos intercalares</td><td>Corazón</td></tr>
+        <tr><td>Liso</td><td>No</td><td>Involuntario</td><td>Fusiforme, mononucleado</td><td>Órganos huecos</td></tr>
+      </tbody>
+    </table>
+
+    <p>Propiedades comunes del tejido muscular: excitabilidad, contractilidad, extensibilidad y elasticidad.</p>
+
+    <h2>Tejido Nervioso</h2>
+    <img src="imagenes/TejidoNervioso.jpg" alt="Histología tejido nervioso" />
+    <p>El tejido nervioso está especializado en la recepción, procesamiento y transmisión de señales eléctricas. Es el componente principal del sistema nervioso central y periférico.</p>
+
+    <h3>1. Neuronas</h3>
+    <ul>
+      <li>Son las células funcionales del tejido nervioso.</li>
+      <li>Poseen un soma o cuerpo celular, dendritas (reciben estímulos) y axón (envía señales).</li>
+      <li>Transforman estímulos en impulsos eléctricos llamados potenciales de acción.</li>
+      <li>Se agrupan en núcleos (en el SNC) o ganglios (en el SNP).</li>
+    </ul>
+
+    <h3>2. Células Gliales</h3>
+    <ul>
+      <li>Brindan soporte, protección, nutrición y aislamiento a las neuronas.</li>
+      <li>Tipos:</li>
+      <ul>
+        <li><strong>Astrocitos:</strong> mantienen la barrera hematoencefálica.</li>
+        <li><strong>Oligodendrocitos (SNC) / Células de Schwann (SNP):</strong> forman la mielina.</li>
+        <li><strong>Microglía:</strong> actúa como defensa inmunológica.</li>
+        <li><strong>Células ependimarias:</strong> producen líquido cefalorraquídeo (LCR).</li>
+      </ul>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>Elemento</th><th>Función principal</th><th>Ubicación</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Neurona</td><td>Transmisión de impulsos</td><td>Sistema nervioso</td></tr>
+        <tr><td>Astrocitos</td><td>Soporte y protección</td><td>SNC</td></tr>
+        <tr><td>Oligodendrocitos/Schwann</td><td>Formación de mielina</td><td>SNC/SNP</td></tr>
+        <tr><td>Microglía</td><td>Defensa inmunológica</td><td>SNC</td></tr>
+        <tr><td>Células ependimarias</td><td>Producción de LCR</td><td>Ventrículos SNC</td></tr>
+      </tbody>
+    </table>
+
+    <button onclick="location.href='index.html#temas'">← Volver al Inicio</button>
+
+  </div>
+</body>
+</html>

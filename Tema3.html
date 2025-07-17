@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unidad 3: Histología de Aparatos y Sistemas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -5%;
+      left: -5%;
+      width: 110vw;
+      height: 110vh;
+      background: url('imagenes/FondoH2.jpeg') center center / cover no-repeat;
+      filter: brightness(0.4) blur(8px);
+      z-index: -2;
+    }
+
+    .contenido {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1, h2, h3 {
+      text-shadow: 1px 1px 3px black;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-size: 1.4rem;
+    }
+
+    p, li {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px black;
+      margin-top: 8px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 25px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      background-color: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(4px);
+    }
+
+    thead {
+      background: linear-gradient(90deg, rgba(0,188,212,0.5), rgba(0,150,200,0.5));
+    }
+
+    th, td {
+      padding: 14px 12px;
+      text-align: center;
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    th {
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    button {
+      display: block;
+      margin: 40px auto 0;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #00bcd4;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-shadow: none;
+    }
+
+    button:hover {
+      background-color: #008c9e;
+    }
+
+    @media (max-width: 600px) {
+      table, th, td {
+        font-size: 0.95rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .contenido {
+        padding: 20px;
+      }
+    }
+     img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+
+  @media screen and (max-width: 600px) {
+    img {
+      width: 90%;
+    }
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="contenido">
+    <h1>Histología de Aparatos y Sistemas</h1>
+
+    <h2>Aparato Circulatorio</h2>
+
+    <h3>Endotelio Vascular</h3>
+     <img src="imagenes/endoteliovascular.jpg" alt="Endotelio Vascular" />
+    <p>El endotelio es un epitelio escamoso simple que recubre la superficie interna de vasos sanguíneos y del corazón, formando una barrera semipermeable. Las células endoteliales presentan uniones oclusivas que regulan el paso de sustancias y secretan factores vasoactivos que controlan el tono vascular y la coagulación.</p>
+
+    <h3>Túnicas de los Vasos Sanguíneos</h3>
+         <img src="imagenes/arterias.png" alt="Túnicas de los Vasos Sanguíneos" />
+    <ul>
+      <li><strong>Túnica íntima:</strong> formada por el endotelio y una capa subendotelial de tejido conectivo laxo con fibras elásticas.</li>
+      <li><strong>Túnica media:</strong> compuesta principalmente por músculo liso organizado en capas helicoidales, responsables de la contracción y regulación del diámetro vascular.</li>
+      <li><strong>Túnica adventicia:</strong> tejido conectivo denso con fibras colágenas y elásticas, que brinda soporte estructural y contiene nervios y vasos propios (vasa vasorum).</li>
+    </ul>
+
+    <h3>Variaciones Histológicas según el Tipo de Vaso</h3>
+          <img src="imagenes/Variaciones.jpg" alt="Variaciones Histológicas según el Tipo de Vaso" />
+    <ul>
+      <li><strong>Arterias elásticas:</strong> tienen una túnica media rica en fibras elásticas que permiten soportar la presión sistólica elevada, como en la aorta.</li>
+      <li><strong>Arterias musculares:</strong> predominan las células musculares lisas en la túnica media con menos fibras elásticas, facilitando la regulación del flujo sanguíneo.</li>
+      <li><strong>Arteriolas:</strong> poseen una o dos capas de músculo liso, regulando la resistencia vascular.</li>
+      <li><strong>Capilares:</strong> formados por una sola capa de células endoteliales y membrana basal, permiten el intercambio de gases y nutrientes. Existen tipos continuos, fenestrados y discontinuos.</li>
+      <li><strong>Vénulas y venas:</strong> tienen paredes más delgadas, menos músculo liso y más tejido conectivo; las venas presentan válvulas formadas por pliegues endoteliales para evitar el reflujo sanguíneo.</li>
+    </ul>
+
+    <h3>Histología del Corazón</h3>
+     <img src="imagenes/Corazon.jpg" alt="Histología del Corazón" />
+
+    <ul>
+      <li><strong>Endocardio:</strong> revestimiento interno formado por endotelio y tejido conectivo subyacente; en áreas específicas contiene fibras de Purkinje especializadas en conducción eléctrica.</li>
+      <li><strong>Miocardio:</strong> tejido muscular cardíaco estriado con fibras ramificadas y núcleos centrales, unidas por discos intercalares con desmosomas y uniones GAP que permiten contracción sincronizada.</li>
+      <li><strong>Epicardio:</strong> capa externa constituida por mesotelio (epitelio plano simple) y tejido conectivo con vasos sanguíneos y nervios.</li>
+    </ul>
+
+    <h3>Células Sanguíneas (Contexto Histológico)</h3>
+    <p>Las células sanguíneas se originan en la médula ósea y presentan características morfológicas específicas: los eritrocitos son anucleados y bicóncavos; los leucocitos contienen núcleo y diferentes tipos celulares según la función inmunitaria; las plaquetas son fragmentos citoplasmáticos esenciales para la coagulación.</p>
+
+    <h2>Aparato de Sostén</h2>
+      <img src="imagenes/celulasoceas.jpg" alt="Células óseas" />
+    <h3>Tejido Óseo</h3>
+    <ul>
+      <li><strong>Matriz extracelular:</strong> compuesta por colágeno tipo I y minerales como hidroxiapatita que proporcionan resistencia y dureza.</li>
+      <li><strong>Organización estructural:</strong> el hueso compacto está formado por osteonas o sistemas de Havers con lagunas que alojan osteocitos conectados por canalículos.</li>
+      <li><strong>Células óseas:</strong></li>
+      <ul>
+        <li><strong>Osteoblastos:</strong> células mononucleadas en la superficie ósea que sintetizan la matriz orgánica.</li>
+        <li><strong>Osteocitos:</strong> células maduras dentro de lagunas, mantienen la matriz ósea y comunican con otras células mediante canalículos.</li>
+        <li><strong>Osteoclastos:</strong> multinucleados, encargados de la resorción ósea, localizados en lagunas de resorción, derivan de la línea monocítica.</li>
+      </ul>
+      <li><strong>Periostio y endostio:</strong> capas de tejido conectivo que recubren el hueso, contienen células osteoprogenitoras para crecimiento y reparación.</li>
+    </ul>
+
+    <h3>Tejido Cartilaginoso</h3>
+       <img src="imagenes/tejidocartilaginoso.webp" alt="Tejido Cartilaginoso" />
+    <ul>
+      <li><strong>Matriz extracelular:</strong> abundante en proteoglicanos y colágeno tipo II, aporta resistencia a la compresión y elasticidad.</li>
+      <li><strong>Condrocitos:</strong> células ubicadas en lagunas dentro de la matriz, responsables de sintetizar y mantener la matriz cartilaginosa.</li>
+      <li><strong>Tipos de cartílago:</strong></li>
+      <ul>
+        <li><strong>Hialino:</strong> matriz homogénea con fibras colágenas finas, cubre superficies articulares y forma el esqueleto fetal.</li>
+        <li><strong>Elástico:</strong> contiene fibras elásticas en la matriz, presente en estructuras flexibles como la oreja y epiglotis.</li>
+        <li><strong>Fibrocartílago:</strong> matriz con abundantes fibras colágenas tipo I, proporciona resistencia a la tracción en discos intervertebrales y sínfisis púbica.</li>
+      </ul>
+    </ul>
+
+        <h3>Ligamentos y Tendones</h3>
+       <img src="imagenes/Ligamentos y tendones.png" alt="Ligamentos y Tendones" />
+    <p>Los ligamentos y tendones son estructuras de tejido conectivo denso regular que cumplen funciones de unión y transmisión de fuerzas.</p>
+    <ul>
+      <li><strong>Composición celular:</strong> predominan los fibroblastos especializados llamados células tendinosas o ligamentarias, encargadas de sintetizar la matriz extracelular.</li>
+      <li><strong>Matriz extracelular:</strong> está formada principalmente por fibras de colágeno tipo I, organizadas en fibrillas que se agrupan en fibras y haces paralelos, proporcionando alta resistencia a la tensión.</li>
+      <li><strong>Organización estructural:</strong> la disposición paralela de las fibras colágenas permite soportar fuerzas unidireccionales; los tendones suelen tener una estructura más ordenada que los ligamentos, que pueden tener fibras entrecruzadas para resistir fuerzas multidireccionales.</li>
+      <li><strong>Componentes no fibrilares:</strong> incluyen proteoglicanos, glucosaminoglicanos y glucoproteínas que contribuyen a la elasticidad, hidratación y mantenimiento de la matriz.</li>
+      <li><strong>Vascularización:</strong> relativamente escasa; los tendones poseen zonas avasculares, lo que limita su capacidad de reparación.</li>
+      <li><strong>Inervación:</strong> abundante en ligamentos, con terminaciones nerviosas para percepción del dolor y propiocepción; los tendones contienen órganos tendinosos de Golgi para monitorear la tensión.</li>
+      <li><strong>Diferencias histológicas:</strong> los ligamentos presentan fibras colágenas ligeramente menos paralelas y mayor cantidad de fibras elásticas en comparación con los tendones, otorgándoles mayor flexibilidad.</li>
+    </ul>
+
+    <button onclick="location.href='index.html#temas'">← Volver al Inicio</button>
+  </div>
+</body>
+</html>

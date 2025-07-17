@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tejido Epitelial y Conectivo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      background: #121212;
+      color: white;
+    }
+
+    body {
+      position: relative;
+      background: none;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -5%;
+      left: -5%;
+      width: 110vw;
+      height: 110vh;
+      background-image: url('imagenes/FondoH2.jpeg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: brightness(0.4) blur(8px);
+      z-index: -2;
+    }
+
+    .contenido {
+      position: relative;
+      z-index: 1;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+    }
+
+    h1, h2, h3 {
+      text-shadow: 1px 1px 3px black;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 2rem;
+    }
+
+    h3 {
+      margin-top: 30px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    /* Tabla con estilo natural y moderno */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #f0f0f0;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+
+    th, td {
+      padding: 14px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    th {
+      background-color: rgba(55, 45, 58, 0.85);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      cursor: default;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Responsive para móviles */
+    @media screen and (max-width: 720px) {
+      .contenido {
+        padding: 20px 10px;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      thead tr {
+        display: none;
+      }
+
+      tbody tr {
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 15px;
+      }
+
+      tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+
+      td {
+        border: none;
+        padding: 8px 10px;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        white-space: normal;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        top: 8px;
+        font-weight: 700;
+        color: #7dbb8a;
+        white-space: nowrap;
+        text-shadow: none;
+      }
+    }
+
+    /* Estilos para sección funciones */
+    .funciones-epitelial {
+      margin-top: 40px;
+    }
+
+    .funciones-epitelial h3 {
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px black;
+      font-size: 1.8rem;
+    }
+
+    .funciones-epitelial h4 {
+      margin-top: 25px;
+      font-size: 1.4rem;
+      color: #f5f5f5;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+    }
+
+    .funciones-epitelial p {
+      margin-top: 8px;
+      font-size: 1.15rem;
+      line-height: 1.5;
+      text-shadow: none;
+    }
+
+    button {
+      display: block;
+      margin: 40px auto 0;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #00bcd4;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #008c9e;
+    }
+ img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+
+  @media screen and (max-width: 600px) {
+    img {
+      width: 90%;
+    }
+  }
+  .imagen-grande {
+  width: 800px;
+  max-width: 95%;
+}
+
+  </style>
+</head>
+<body>
+  <div class="contenido">
+    <h1>Tejido Epitelial y Conectivo</h1>
+     <img src="imagenes/PortadaHistologia.png" alt="Imagen de tejido epitelial" class="imagen-grande"/>
+    
+    <h3>Definición General</h3>
+    <p>El tejido epitelial es uno de los cuatro tipos fundamentales de tejidos del cuerpo humano. 
+      Está formado por células muy unidas entre sí, que recubren superficies externas e internas 
+      del organismo y forman glándulas.</p>
+    
+    <h3>Funciones principales:</h3>
+    <ul>
+      <li>Protección (piel)</li>
+      <li>Absorción (intestino)</li>
+      <li>Secreción (glándulas)</li>
+      <li>Sensación (receptores sensoriales)</li>
+      <li>Filtración (riñones)</li>
+    </ul>
+
+    <h3>Características generales del tejido epitelial</h3>
+    <ul>
+      <li>Células polares: tienen un polo apical (libre) y uno basal (unido a la membrana basal).</li>
+      <li>Avascular: no posee vasos sanguíneos. Se nutre por difusión desde el tejido conectivo.</li>
+      <li>Alta tasa de renovación celular (reemplazo constante).</li>
+      <li>Presenta uniones celulares: uniones estrechas, desmosomas y uniones comunicantes.</li>
+    </ul>
+
+    <h3>Clasificación del Tejido Epitelial</h3>
+     <img src="imagenes/celulas_epiteliales.jpg" alt="Clasificación del Tejido Epitelial">
+
+    <p>El tejido epitelial se clasifica según el número de capas celulares y la forma de las células, adaptándose así a las funciones específicas que cumple en distintas partes del cuerpo.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Clasificación</th>
+          <th>Tipo</th>
+          <th>Forma celular</th>
+          <th>Ejemplos</th>
+          <th>Función</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Clasificación">Epitelio simple</td>
+          <td data-label="Tipo">Pavimentoso</td>
+          <td data-label="Forma celular">Plano</td>
+          <td data-label="Ejemplos">Alvéolos, vasos</td>
+          <td data-label="Función">Intercambio, filtración</td>
+        </tr>
+        <tr>
+          <td data-label="Clasificación"></td>
+          <td data-label="Tipo">Cúbico</td>
+          <td data-label="Forma celular">Cúbico</td>
+          <td data-label="Ejemplos">Túbulos renales, ovario</td>
+          <td data-label="Función">Secreción, absorción</td>
+        </tr>
+        <tr>
+          <td data-label="Clasificación"></td>
+          <td data-label="Tipo">Cilíndrico</td>
+          <td data-label="Forma celular">Cilíndrico</td>
+          <td data-label="Ejemplos">Intestino, estómago</td>
+          <td data-label="Función">Absorción, secreción</td>
+        </tr>
+        <tr>
+          <td data-label="Clasificación">Epitelio estratificado</td>
+          <td data-label="Tipo">Pavimentoso no queratinizado</td>
+          <td data-label="Forma celular">Plano</td>
+          <td data-label="Ejemplos">Cavidad oral, vagina</td>
+          <td data-label="Función">Protección</td>
+        </tr>
+        <tr>
+          <td data-label="Clasificación"></td>
+          <td data-label="Tipo">Pavimentoso queratinizado</td>
+          <td data-label="Forma celular">Plano con queratina</td>
+          <td data-label="Ejemplos">Piel</td>
+          <td data-label="Función">Protección contra desecación</td>
+        </tr>
+        <tr>
+          <td data-label="Clasificación"></td>
+          <td data-label="Tipo">Cúbico</td>
+          <td data-label="Forma celular">Cúbico</td>
+          <td data-label="Ejemplos">Glándulas sudoríparas</td>
+          <td data-label="Función">Conducción, protección</td>
+        </tr>
+        <tr>
+          <td data-label="Clasificación"></td>
+          <td data-label="Tipo">Cilíndrico</td>
+          <td data-label="Forma celular">Cilíndrico</td>
+          <td data-label="Ejemplos">Uretra</td>
+          <td data-label="Función">Protección, secreción</td>
+        </tr>
+        <tr>
+          <td data-label="Clasificación">Pseudoestratificado</td>
+          <td data-label="Tipo">Cilíndrico con cilios</td>
+          <td data-label="Forma celular">Cilíndrico</td>
+          <td data-label="Ejemplos">Tráquea, bronquios</td>
+          <td data-label="Función">Movimiento de moco</td>
+        </tr>
+        <tr>
+          <td data-label="Clasificación">Transicional</td>
+          <td data-label="Tipo">Células en cúpula (flexible)</td>
+          <td data-label="Forma celular">Variable</td>
+          <td data-label="Ejemplos">Vejiga, uréter</td>
+          <td data-label="Función">Expansión, protección</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section class="funciones-epitelial">
+      <h3>Funciones del Tejido Epitelial</h3>
+      <img src="imagenes/Funciones.jpg" alt="Funciones del tejido epitelial" />
+
+      <h4>Protección:</h4>
+      <p>Forma una barrera que protege los tejidos subyacentes contra daños físicos, químicos, invasión de microorganismos y pérdida de agua. Por ejemplo, la epidermis de la piel protege el cuerpo del ambiente externo.</p>
+
+      <h4>Absorción:</h4>
+      <p>Permite la captación de sustancias desde el exterior o de una cavidad hacia el interior del organismo. Un ejemplo claro es el epitelio del intestino delgado, que absorbe nutrientes.</p>
+
+      <h4>Secreción:</h4>
+      <p>Las células epiteliales especializadas forman glándulas que producen y liberan sustancias como enzimas, hormonas, moco o sudor, esenciales para diversas funciones corporales.</p>
+
+      <h4>Sensación:</h4>
+      <p>Algunos epitelios contienen terminaciones nerviosas especializadas que detectan estímulos sensoriales como el tacto, la temperatura o el dolor.</p>
+
+      <h4>Filtración:</h4>
+      <p>En ciertos órganos, como los riñones, el epitelio participa en la filtración de líquidos y sustancias, permitiendo la formación de orina y la eliminación de desechos.</p>
+
+      <h4>Transporte y movimiento:</h4>
+      <p>En epitelios ciliados, como en las vías respiratorias, los cilios ayudan a mover partículas y mucus hacia el exterior, facilitando la limpieza y protección de las vías aéreas.</p>
+    </section>
+
+    <h2>Glándulas y Secreción</h2>
+  
+    <p>Las <strong>glándulas</strong> son órganos especializados formados por células epiteliales cuya función principal es la <strong>producción y liberación de sustancias químicas</strong> necesarias para diversas funciones fisiológicas. Se clasifican en dos grandes grupos según su mecanismo de secreción y destino del producto:</p>
+  
+    <h3>Clasificación de las glándulas:</h3>
+         <img src="imagenes/glandulas endocrinas y exocrinas.jpg" alt="Clasificación de las glándulas" />
+    <h4>1. Glándulas Exocrinas</h4>
+    <ul>
+      <li>Secretan sus productos a través de conductos hacia una superficie externa o interna del cuerpo, como la piel o la cavidad digestiva.</li>
+      <li><em>Ejemplos:</em> glándulas sudoríparas, salivales, sebáceas y pancreáticas exocrinas.</li>
+      <li><strong>Mecanismos de secreción exocrina:</strong>
+        <ul>
+          <li><em>Merocrina:</em> La secreción ocurre por exocitosis sin daño celular, como en las glándulas salivales.</li>
+          <li><em>Apocrina:</em> Se libera parte del citoplasma celular junto con la secreción, ejemplo: glándulas mamarias.</li>
+          <li><em>Holocrina:</em> La célula se desintegra completamente para liberar su contenido, ejemplo: glándulas sebáceas.</li>
+        </ul>
+      </li>
+    </ul>
+  
+    <h4>2. Glándulas Endocrinas</h4>
+    <ul>
+      <li>Secretan hormonas directamente al torrente sanguíneo, sin conductos, para regular procesos fisiológicos a distancia.</li>
+      <li><em>Ejemplos:</em> tiroides, hipófisis, suprarrenales y páncreas endocrino.</li>
+      <li>Las células endocrinas forman islotes o cúmulos celulares que facilitan la liberación hormonal.</li>
+    </ul>
+
+    <h3>Tipos de secreciones glandulares:</h3>
+      <img src="imagenes/Secrecion.png" alt="secreciones glandulares">
+    <ul>
+      <li><strong>Secreción serosa:</strong> Líquido acuoso rico en enzimas, como la amilasa en glándulas salivales serosas.</li>
+      <li><strong>Secreción mucosa:</strong> Líquido viscoso rico en mucinas que lubrica y protege, como en glándulas mucosas del intestino.</li>
+      <li><strong>Secreción mixta:</strong> Combinación de serosa y mucosa, como en las glándulas salivales submandibulares.</li>
+    </ul>
+
+    <h3>Funciones de las glándulas:</h3>
+    <ul>
+      <li>Regulación hormonal (glándulas endocrinas) para controlar metabolismo, crecimiento y reproducción.</li>
+      <li>Producción de enzimas digestivas para la degradación de alimentos.</li>
+      <li>Producción de moco para lubricación y protección de superficies.</li>
+      <li>Eliminación de productos de desecho o toxinas a través del sudor.</li>
+    </ul>
+
+    <h2>Tejido Conectivo</h2>
+         <img src="imagenes/tejidoconjuntivo.jpg" alt="Tejido Conectivo">
+
+    <p>El <strong>tejido conectivo</strong> es uno de los principales tejidos del cuerpo humano y cumple funciones vitales de soporte, protección y transporte. Está compuesto por células dispersas en una matriz extracelular rica en fibras y sustancia fundamental. Su estructura permite una gran variedad funcional en diferentes órganos.</p>
+
+    <h3>Componentes del tejido conectivo:</h3>
+    <ul>
+      <li><strong>Células:</strong> Fibroblastos (productores de fibras), macrófagos (defensa), mastocitos (reacción inflamatoria), adipocitos (almacenamiento de grasa), entre otras.</li>
+      <li><strong>Matriz extracelular:</strong> Compuesta por fibras (colágeno, elastina y reticulares) y sustancia fundamental (gel hidratado que facilita el intercambio de nutrientes y desechos).</li>
+    </ul>
+
+    <h3>Clasificación del tejido conectivo:</h3>
+     <img src="imagenes/tejido-conectivo clasificacion.webp" alt="Clasificación del tejido conectivo">
+    <ul>
+      <li><strong>Tejido conectivo laxo:</strong> Soporte flexible y nutrición a otros tejidos, encontrado debajo del epitelio y alrededor de órganos.</li>
+      <li><strong>Tejido conectivo denso:</strong> Rico en fibras colágenas, ofrece resistencia y soporte mecánico (tendones, ligamentos).</li>
+      <li><strong>Tejido adiposo:</strong> Almacena energía y proporciona aislamiento térmico.</li>
+      <li><strong>Tejido cartilaginoso:</strong> Soporte flexible en articulaciones y estructuras como nariz y orejas.</li>
+      <li><strong>Tejido óseo:</strong> Matriz mineralizada que da soporte rígido al cuerpo.</li>
+      <li><strong>Tejido sanguíneo:</strong> Compuesto por células sanguíneas en plasma, responsable del transporte y defensa.</li>
+    </ul>
+
+    <h3>Funciones del tejido conectivo:</h3>
+    <ul>
+      <li>Soporte estructural para órganos y tejidos.</li>
+      <li>Protección de órganos internos mediante tejidos especializados (hueso, cartílago).</li>
+      <li>Almacenamiento y transporte de sustancias (grasa, nutrientes, células inmunes).</li>
+      <li>Defensa inmunológica gracias a células como macrófagos y mastocitos.</li>
+      <li>Reparación y cicatrización de tejidos tras lesiones.</li>
+    </ul>
+
+
+    <button onclick="location.href='index.html#temas'">← Volver al Inicio</button>
+  </div>
+</body>
+</html>
