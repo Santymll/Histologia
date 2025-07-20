@@ -1,1 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explora la Histología</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .scroll-container {
+      display: flex;
+      height: 100vh;
+      width: 200vw;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+    }
+
+    section {
+      scroll-snap-align: start;
+      width: 100vw;
+      min-height: 100vh;
+      flex-shrink: 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: visible;
+    }
+
+    .hero {
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      z-index: 1;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('imagenes/FondoH1.jpeg') center center / cover no-repeat;
+      filter: brightness(60%) blur(3px);
+      z-index: -1;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .hero button {
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 5px;
+    }
+
+    .hero button:hover {
+      background-color: #008c9e;
+    }
+
+    .temas {
+      position: relative;
+      color: white;
+      width: 100vw;
+      min-height: 100vh;
+      flex-shrink: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .temas .fondo-filtro {
+      position: absolute;
+      inset: 0;
+      background: url('imagenes/FondoH2.jpeg') center center / cover no-repeat;
+      filter: brightness(0.6);
+      z-index: 0;
+    }
+
+    .temas .contenido {
+      position: relative;
+      z-index: 1;
+      padding: 60px 40px 80px 40px;
+      overflow-y: auto;
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr) auto;
+      gap: 40px;
+    }
+
+    .card {
+      background-color: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      color: white;
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255,255,255,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+      color: #e0f7fa;
+      text-shadow: 1px 1px 3px #004b8d;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #cfd8dc;
+      text-shadow: 1px 1px 2px #000;
+      flex-grow: 1;
+    }
+
+    .contenido button {
+      grid-column: 1 / -1;
+      justify-self: center;
+      align-self: center;
+      background-color: rgba(0,188,212,0.7);
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: max-content;
+      margin-bottom: 40px;
+    }
+
+    .contenido button:hover {
+      background-color: rgba(0,140,158,0.85);
+    }
+
+    .extra-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .extra-buttons button {
+      background-color: #4caf50;
+    }
+
+    .extra-buttons button:hover {
+      background-color: #388e3c;
+    }
+
+    @media (max-width: 768px) {
+      .contenido {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto) auto;
+        padding: 40px 20px 60px 20px;
+        filter: brightness(0.8);
+      }
+
+      .contenido button {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        padding: 7px 14px;
+        margin-bottom: 30px;
+      }
+
+      .card img {
+        max-height: 150px;
+      }
+
+      .card h3 {
+        font-size: 1.4rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-container">
+
+    <!-- Pantalla 1 -->
+    <section class="hero" id="pantalla1">
+      <h2>Histologia Humana</h2>
+      <p>Aprende sobre los tejidos humanos y la estructura microscópica del cuerpo de forma clara e interactiva.</p>
+      <button onclick="document.getElementById('temas').scrollIntoView({behavior:'smooth',inline:'start'})">Ver Temas →</button>
+      <div class="extra-buttons">
+        <button onclick="window.location.href='Preguntas.html'">📝 Preguntas</button>
+        <button onclick="window.location.href='Comentarios.html'">💬 Comentarios</button>
+      </div>
+    </section>
+
+    <!-- Pantalla 2 -->
+    <section class="temas" id="temas">
+      <div class="fondo-filtro"></div>
+      <div class="contenido">
+        <div class="card" onclick="window.location.href='Tema1.html'">
+          <img src="imagenes/TejidoEpitelial.jpeg" alt="Tejido Epitelial" />
+          <h3>🧫 Tejido Epitelial</h3>
+          <p>Conoce los tipos, funciones y características del tejido que recubre superficies internas y externas del cuerpo.</p>
+        </div>
+        <div class="card" onclick="window.location.href='Tema2.html'">
+          <img src="imagenes/TejidoMuscular.jpg" alt="Tejido Muscular" />
+          <h3>💪 Tejido Muscular</h3>
+          <p>Explora las fibras musculares esqueléticas, lisas y cardíacas con imágenes detalladas y comparativas.</p>
+        </div>
+        <div class="card" onclick="window.location.href='Tema3.html'">
+          <img src="imagenes/HistologiaAparatos.png" alt="Histología de Aparatos" />
+          <h3>🫀 Histología de Aparatos</h3>
+          <p>Estudia la estructura microscópica de órganos como el corazón, pulmones, riñones y sistema digestivo.</p>
+        </div>
+        <div class="card" onclick="window.location.href='Tema4.html'">
+          <img src="imagenes/SitemaTugumentario.jpg" alt="Sistema Tegumentario" />
+          <h3>🧍 Sistema Tegumentario</h3>
+          <p>Analiza las capas de la piel, glándulas, folículos y estructuras especializadas bajo el microscopio.</p>
+        </div>
+        <button onclick="document.getElementById('pantalla1').scrollIntoView({behavior:'smooth',inline:'start'})">← Volver al Inicio</button>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
